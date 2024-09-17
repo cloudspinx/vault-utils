@@ -9,7 +9,7 @@ RUN groupadd -g "${GID}" vault && mkdir -p /home/vault \
 
 
 # Update apt and Install dependencies
-RUN apt update && apt install software-properties-common -y && add-apt-repository ppa:rmescandon/yq -y \
+RUN apt update && apt install software-properties-common -y \
     && apt update && DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt-get install -y \
     tzdata \
     curl \
