@@ -1,7 +1,7 @@
 FROM ubuntu:24.04
 ARG VAULT_VERSION=1.17.5 # https://github.com/hashicorp/vault/releases
-ARG UID=100
-ARG GID=1000
+ARG UID=999
+ARG GID=999
 ARG KUBECTL_VERSION=v1.27.13
 
 RUN groupadd -g "${GID}" vault && mkdir -p /home/vault \
